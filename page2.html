@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Letter</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page2">
+    <video autoplay muted loop id="bgVideo">
+        <source src="assets/videobubu.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+
+        
+        <p style="text-align: center; font-weight: bold; font-size: 2em; color: #ff69b4; margin: 40px 0;">Happy Birthday, my Adlina 💖🎂✨</p>
+        <div class="long-text">
+            <p>On this special day, I want to remind you how much you truly mean to me. You are the light of my life, my best friend, my safe place, and my greatest adventure. Every moment spent with you is a treasure that I hold close to my heart, and I am endlessly grateful for all the beautiful memories we have created together.</p>
+
+            <p>From the very beginning, you have brought so much happiness, love, and warmth into my life. Your smile brightens even my darkest days, your laughter fills my heart with joy, and your love gives me strength and comfort. Being with you has made my life more meaningful than I ever imagined.</p>
+
+            <p>I will never forget our first date on 11 October 2024. It was the day that started one of the most beautiful chapters of my life. What seemed like a simple day became the beginning of countless wonderful memories, heartfelt conversations, shared dreams, and unforgettable moments together. Looking back, I feel so lucky that our paths crossed and that we chose each other.</p>
+
+            <p>Through every laugh, every challenge, every adventure, and every milestone, you have been by my side. Thank you for your love, your patience, your kindness, and for always believing in us. You make ordinary days feel extraordinary, and every moment with you is a gift that I cherish deeply.</p>
+
+            <p>As you celebrate another year of your amazing life, I wish you endless happiness, success, good health, laughter, and all the love your heart can hold. May all your dreams come true, and may this new year bring you beautiful opportunities and unforgettable memories.</p>
+
+            <p>No matter where life takes us, I promise to continue creating wonderful memories with you, supporting you, and loving you with all my heart. Thank you for being the incredible person that you are and for making my world brighter every single day.</p>
+
+
+            <p>11 October 2024 was the day our story began, and every day since then has been my favorite chapter. I love you more than words can ever express, and I can't wait to create many more beautiful memories together. Here's to us, to our journey, and to all the birthdays we'll celebrate side by side. ❤️</p>
+        </div>
+        <button class="next-btn" onclick="location.href='page3.html'">See Our Memories 📸</button>
+    </div>
+
+    <audio id="page2Music" src="assets/lesungpipi.mp3" loop autoplay></audio>
+    <script>
+        // The browser should allow this because the user interacted with index.html
+        const audio = document.getElementById('page2Music');
+        audio.play().catch(e => console.log("Autoplay blocked. Click anywhere to play."));
+    </script>
+    <script src="assets/animation.js"></script>
+</body>
+</html>

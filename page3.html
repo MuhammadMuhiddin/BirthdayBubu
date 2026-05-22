@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page3">
+    <video autoplay muted loop id="bgVideo">
+        <source src="assets/videobubu.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h2>Our Beautiful Moments</h2>
+        <div class="mindmap-container">
+            <svg class="mindmap-arrows" viewBox="0 0 1000 700">
+                <!-- Arrows between images -->
+                <defs>
+                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L10,5 L0,10 Z" fill="#ff69b4" />
+                  </marker>
+                </defs>
+                <!-- Dashed curved paths like a treasure map flow -->
+                <path d="M 140 180 Q 500 50 860 120" stroke="#ff69b4" stroke-width="3" fill="none" stroke-dasharray="10, 10" marker-end="url(#arrow)"/>
+                <path d="M 860 120 Q 980 320 890 520" stroke="#b5c6e0" stroke-width="3" fill="none" stroke-dasharray="10, 10" marker-end="url(#arrow)"/>
+                <path d="M 890 520 Q 500 680 120 550" stroke="#ffb6b9" stroke-width="3" fill="none" stroke-dasharray="10, 10" marker-end="url(#arrow)"/>
+                <path d="M 120 550 Q 20 350 140 180" stroke="#c06c84" stroke-width="3" fill="none" stroke-dasharray="10, 10" marker-end="url(#arrow)"/>
+            </svg>
+            <div class="mindmap-pic pic1">
+                <img src="assets/firstdate.jpg" alt="Us 1">
+                <div class="pic-desc">First Date 💑</div>
+                <p>I will never forget our first date on 11 October 2024. It was a chaos day for you i think because awak makan laksa comot </p>
+            </div>
+            <div class="mindmap-pic pic2">
+                <img src="assets/1jan.jpg" alt="Us 2">
+                <div class="pic-desc">1 Jan 2025 </div>
+                <p>First day of new year, 2025. The day we decide to love each other hihi.</p>
+            </div>
+            <div class="mindmap-pic pic3">
+                <img src="assets/kldate.jpg" alt="Us 3">
+                <div class="pic-desc">First KL Date</div>
+                <p>Our first date in Kuala Lumpur! The day awak bawak saya jalan jalan kawasan awak.</p>
+            </div>
+            <div class="mindmap-pic pic4">
+                <img src="assets/loml.jpg" alt="Us 4">
+                <div class="pic-desc">My LOML✨</div>
+                <p>The day you met my mom, i hope she will be your mother in law. aamiinnnn!</p>
+            </div>
+        </div>
+        <button class="next-btn" onclick="location.href='page4.html'">Watch Our Videos 🎥</button>
+    </div>
+    <script src="assets/animation.js"></script>
+    <audio id="page3Music" src="assets/shape.mp3" loop autoplay></audio>
+    <script>
+        // Play the background music for Page 3
+        const audio3 = document.getElementById('page3Music');
+        audio3.play().catch(e => console.log("Audio playback deferred: ", e));
+    </script>
+    <style>
+    .mindmap-container {
+        position: relative;
+        width: 1000px;
+        height: 700px;
+        margin: 0 auto 40px auto;
+    }
+    .mindmap-arrows {
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 1;
+        pointer-events: none;
+        width: 1000px;
+        height: 700px;
+    }
+    .mindmap-pic {
+        position: absolute;
+        width: 220px; /* Increased width for each image div */
+        text-align: center;
+        z-index: 2;
+        background: rgba(255,255,255,0.92);
+        border-radius: 28px;
+        box-shadow: 0 6px 24px rgba(255,182,193,0.18);
+        padding: 20px 0 0 0; /* Adjusted padding */
+    }
+    .mindmap-pic img {
+        width: 180px; /* Increased image size */
+        height: 180px; /* Increased image size */
+        object-fit: cover;
+        border-radius: 20px;
+        border: 3px solid #ffb6c1;
+        margin-bottom: 10px;
+    }
+    .pic-desc {
+        font-size: 1.3em;
+        color: #ff69b4;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .pic1 { left: 30px; top: 20px; } /* Adjusted position */
+    .pic2 { left: 750px; top: 10px; } /* Adjusted position */
+    .pic3 { left: 780px; top: 410px; } /* Adjusted position */
+    .pic4 { left: 10px; top: 440px; } /* Adjusted position */
+
+    @media (max-width: 768px) {
+        .mindmap-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            height: auto;
+            width: 100%;
+        }
+        .mindmap-arrows { display: none; }
+        .mindmap-pic {
+            position: static;
+            width: 90%;
+            padding: 15px;
+        }
+    }
+    </style>
+</body>
+</html>

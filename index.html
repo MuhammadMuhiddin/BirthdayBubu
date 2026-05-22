@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page1">
+    <div class="container">
+        <h1 class="animated-text">Happy Birthday , My Bubu! 🎉</h1>
+        <p class="subtitle">Click the heart to continue!</p>
+        <button class="heart-btn" id="heartBtn">
+            <span class="heart">❤️</span>
+        </button>
+    </div>
+    <audio id="birthdaySong" src="assets/birthday-song.mp3" loop preload="auto"></audio>
+
+    <div id="audioOverlay">
+        <p>Click anywhere to start the music and continue!</p>
+        <button class="overlay-btn">▶️ Start</button>
+    </div>
+
+    <script>
+        const audio = document.getElementById('birthdaySong');
+        const audioOverlay = document.getElementById('audioOverlay');
+
+        // When the overlay is clicked, try to play the song
+        audioOverlay.addEventListener('click', function() {
+            audio.play().then(() => {
+                audioOverlay.style.display = 'none'; // Hide overlay if successful
+            }).catch(error => {
+                console.error("Autoplay blocked or audio error:", error);
+                // If autoplay is blocked, keep the overlay and notify the user
+                audioOverlay.querySelector('p').textContent = "Browser blocked autoplay. Please click again or click the heart button.";
+            });
+        });
+
+        document.getElementById('heartBtn').addEventListener('click', function() {
+            // Ensure the song is played/continued when the button is clicked
+            audio.play().then(() => {
+                // Wait 1 second so the song can be heard before moving to the next page
+                setTimeout(() => { window.location.href = 'page2.html'; }, 1000);
+            }).catch(error => {
+                console.error("Audio error:", error);
+                window.location.href = 'page2.html';
+            });
+        });
+    </script>
+    <script src="assets/animation.js"></script>
+</body>
+</html>

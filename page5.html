@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise!</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page5">
+    <video autoplay muted loop id="bgVideo">
+        <source src="assets/videobubu.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h2>Make a Wish! 🎂</h2>
+        <canvas id="cakeCanvas" width="400" height="400"></canvas>
+        <p class="final-wish">Happy Birthday, my Adlina! May all your dreams come true. I love you forever! 💕</p>
+        <button class="next-btn" onclick="location.href='index.html'">Back to Start 🔄</button>
+    </div>
+    <script src="assets/animation.js"></script>
+    <script src="assets/cake.js"></script>
+    <audio id="page5Music" src="assets/birthday-song.mp3" loop autoplay></audio>
+    <script>
+        // Play the background music for Page 5
+        const audio5 = document.getElementById('page5Music');
+        audio5.play().catch(e => console.log("Audio playback deferred: ", e));
+    </script>
+</body>
+</html>
